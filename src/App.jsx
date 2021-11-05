@@ -12,7 +12,6 @@ import Contact from './pages/Contact'
 import Error from './pages/Error'
 
 const App = () => {
-
   return (
     <Router>
       <Navigation />
@@ -28,7 +27,7 @@ const App = () => {
         <Route path="*" element={<Error />}></Route>
       </Switch>
     </Router>
-  );
+  )
 }
 
 export default App
