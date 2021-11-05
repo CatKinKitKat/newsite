@@ -5,7 +5,7 @@ import Avatar from '../images/avatar.svg'
 const Home = () => {
     return (
         <Container>
-            <Header size="huge">
+            <Header size='huge'>
                 Home
             </Header>
             <Image src={Avatar} />

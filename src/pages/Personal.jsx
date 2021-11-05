@@ -7,6 +7,7 @@ const Personal = () => {
             <Header size="huge">
                 Personal
             </Header>
+
         </Container>
     )
 }
