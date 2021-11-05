@@ -4,14 +4,14 @@ import { Button, Header, Image, Modal } from 'semantic-ui-react'
 
 const LifeMomentDetails = (props) => {
   const [open, setOpen] = React.useState(false)
-  const link = props.link
+  const link = new URL(props.link)
 
   return (
     <Modal
       onClose={() => setOpen(false)}
       onOpen={() => setOpen(true)}
       open={open}
-      trigger={<Button>Show Details</Button>}
+      trigger={<Button color='black'>Show Details</Button>}
     >
       <Modal.Header>{props.title}</Modal.Header>
       <Modal.Content image>
@@ -22,7 +22,7 @@ const LifeMomentDetails = (props) => {
         </Modal.Description>
       </Modal.Content>
       <Modal.Actions>
-        <Button color='grey' onClick={() => window.open({ link }, '_blank').focus()}>
+        <Button color='black' href={link} target='_blank'>
           Visit Website
         </Button>
       </Modal.Actions>
