@@ -1,19 +1,33 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes as Switch, Route } from 'react-router-dom'
 import Navigation from './components/Navigation'
 import Home from './pages/Home'
+import Personal from './pages/Personal'
+import Academic from './pages/Academic'
+import Career from './pages/Career'
+import Projects from './pages/Projects'
+import Social from './pages/Social'
+import Curriculum from './pages/Curriculum'
+import Contact from './pages/Contact'
 import Error from './pages/Error'
-import 'semantic-ui-css/semantic.min.css'
 
 const App = () => {
+
   return (
-    <BrowserRouter>
+    <Router>
       <Navigation />
-      <Routes>
-        <Route path="/" exact component={Home} />
-        <Route><Error type="404" /> </Route>
-      </Routes>
-    </BrowserRouter>
+      <Switch>
+        <Route path="/" exact element={<Home />} />
+        <Route path="/personal" element={<Personal />} />
+        <Route path="/academic" element={<Academic />} />
+        <Route path="/career" element={<Career />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/social" element={<Social />} />
+        <Route path="/curriculum" element={<Curriculum />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<Error />}></Route>
+      </Switch>
+    </Router>
   );
 }
 
