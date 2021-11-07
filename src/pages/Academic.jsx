@@ -43,7 +43,6 @@ const Academic = () => {
           activities={['Sticker Selling', 'Entrepeneurship', 'Psychedelics']}
         />
       </Item.Group>
-      <Divider />
       <Header size='medium'>
         Extra-Academic
       </Header>

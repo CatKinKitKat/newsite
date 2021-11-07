@@ -8,6 +8,11 @@ const LifeMoment = (props) => {
   const buildActivities = () => {
     const builder = (activities) => {
       return activities.map((activity, index) => {
+        if (activities === undefined || activities === null || activities.length === 0) {
+          return (
+            <></>
+          )
+        }
         return (
           <Label key={index}>
             {activity}
