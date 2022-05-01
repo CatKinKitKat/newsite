@@ -33,9 +33,10 @@ const Curriculum = () => {
             <Card fluid>
               <Card.Content>
                 <Card.Header>Curriculum Vitae</Card.Header>
-                <Card.Meta>Co-Worker</Card.Meta>
+                <Card.Meta>LaTeX PDF</Card.Meta>
                 <Card.Description>
-                  This is my CV, where I
+                  This is my CV, where I thoroughly explain my skills and experience. You are free to download it or just browse it via the rendered PDF.
+                  It is in Portuguese, contact me if you prefer English or any other language I might know enough to translate it.
                 </Card.Description>
               </Card.Content>
             </Card>
@@ -56,9 +57,10 @@ const Curriculum = () => {
         <Card fluid>
           <Card.Content>
             <Card.Header>Curriculum Vitae</Card.Header>
-            <Card.Meta>Co-Worker</Card.Meta>
+            <Card.Meta>LaTeX PDF</Card.Meta>
             <Card.Description>
-              This is my CV, where I
+              This is my CV, where I thoroughly explain my skills and experience. You are free to download it.
+              It is in Portuguese, contact me if you prefer English or any other language I might know enough to translate it.
             </Card.Description>
           </Card.Content>
         </Card>
@@ -71,26 +73,28 @@ const Curriculum = () => {
           <Card />
         )}
       </MediaQuery>
-      <Grid centered>
-        <Grid.Column>
-          <Card fluid>
-            <Card.Content>
-              <Card.Header>Live View</Card.Header>
-            </Card.Content>
-            <Document
-              as={Image}
-              file={file}
-              onLoadSuccess={onDocumentLoadSuccess}
-              options={options}
-            >
-              {Array.apply(null, Array(numPages))
-                .map((_x, i) => i + 1)
-                // eslint-disable-next-line react/jsx-key
-                .map(page => <Page pageNumber={page} />)}
-            </Document>
-          </Card>
-        </Grid.Column>
-      </Grid>
+      <MediaQuery minWidth={640}>
+        <Grid centered>
+          <Grid.Column>
+            <Card fluid>
+              <Card.Content>
+                <Card.Header>Live View</Card.Header>
+              </Card.Content>
+              <Document
+                as={Image}
+                file={file}
+                onLoadSuccess={onDocumentLoadSuccess}
+                options={options}
+              >
+                {Array.apply(null, Array(numPages))
+                  .map((_x, i) => i + 1)
+                  // eslint-disable-next-line react/jsx-key
+                  .map(page => <Page pageNumber={page} />)}
+              </Document>
+            </Card>
+          </Grid.Column>
+        </Grid>
+      </MediaQuery>
     </Container>
   )
 }

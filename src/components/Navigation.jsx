@@ -9,7 +9,7 @@ const Navigation = () => {
     <Menu pointing secondary>
       <Menu.Header>
         <Header as='h5'>
-          <Image src={avatar} />
+          <Image src={avatar} style={{ marginLeft: '1em' }} />
         </Header>
       </Menu.Header>
       <MediaQuery minWidth={695}>

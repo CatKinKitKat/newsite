@@ -23,7 +23,7 @@ const LifeMoment = (props) => {
     if (activities.length > 0) {
       return (
         <>
-          Extra-Curricular Activities:
+          Key Activities:
           <div>
             {builder(activities)}
           </div>
@@ -34,7 +34,7 @@ const LifeMoment = (props) => {
 
   return (
     <Item>
-      <Item.Image size='tiny' src={props.logo} />
+      <Item.Image size='tiny' src={props.logo} class=""/>
       <Item.Content verticalAlign='middle'>
         <Item.Header as='a'>{props.title}</Item.Header>
         <Item.Meta>{props.date}</Item.Meta>

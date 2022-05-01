@@ -46,25 +46,18 @@ const NavList = () => {
         color='teal'
       />
       <Menu.Item
-        as={NavLink} to="/social"
-        name='social'
-        active={activeItem === 'social'}
-        onClick={handleItemClick}
-        color='blue'
-      />
-      <Menu.Item
         as={NavLink} to="/curriculum"
         name='curriculum'
         active={activeItem === 'curriculum'}
         onClick={handleItemClick}
-        color='violet'
+        color='blue'
       />
       <Menu.Item
         as={NavLink} to="/contact"
         name='contact'
         active={activeItem === 'contact'}
         onClick={handleItemClick}
-        color='purple'
+        color='violet'
       />
     </>
   )
