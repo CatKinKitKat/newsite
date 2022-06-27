@@ -2,13 +2,13 @@ import React, { useState } from 'react'
 import { Container, Header, Divider, Grid, Card, Button, Image } from 'semantic-ui-react'
 import MediaQuery from 'react-responsive'
 import { Document, Page, pdfjs } from 'react-pdf'
-import file from '../resources/curriculum.pdf'
+import file from '../resources/resume_cv.pdf'
 
 const Curriculum = () => {
   pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`
 
   const [isShown, setIsShown] = useState(false)
-  const link = new URL('https://github.com/CatKinKitKat/curriculum/raw/master/curriculum.pdf')
+  const link = new URL('https://github.com/CatKinKitKat/curriculum/raw/master/resume_cv.pdf')
 
   const options = {
     cMapUrl: 'cmaps/',
