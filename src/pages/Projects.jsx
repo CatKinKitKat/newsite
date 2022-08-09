@@ -45,7 +45,7 @@ const Projects = () => {
       </Header>
       <Divider />
       <Grid>
-        <Grid.Row className="ui centered">
+        <Grid.Row className="ui center">
           <Card fluid>
             <Card.Content>
               <Card.Header>

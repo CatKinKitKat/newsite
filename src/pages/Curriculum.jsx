@@ -36,7 +36,7 @@ const Curriculum = () => {
       <Header size="huge">Curriculum</Header>
       <Divider />
       <MediaQuery minWidth={695}>
-        <Grid centered>
+        <Grid center>
           <Grid.Column width={12}>
             <Card fluid>
               <Card.Content>
@@ -54,7 +54,7 @@ const Curriculum = () => {
           </Grid.Column>
           <Grid.Column width={4}>
             <Button
-              centered
+              center
               fluid
               onMouseEnter={() => setIsShown(true)}
               onMouseLeave={() => setIsShown(false)}
@@ -81,7 +81,7 @@ const Curriculum = () => {
           </Card.Content>
         </Card>
         <Button
-          centered
+          center
           fluid
           onMouseEnter={() => setIsShown(true)}
           onMouseLeave={() => setIsShown(false)}
